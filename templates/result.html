@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>State</th>
+                <th>Salary</th>
+                <th>Grade</th>
+                <th>Room</th>
+                <th>Telnum</th>
+                <th>Keywords</th>
+                <th>Picture</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in result %}
+                <tr>
+                    <td>{{ row['Name'] }}</td>
+                    <td>{{ row['State'] }}</td>
+                    <td>{{ row['Salary'] }}</td>
+                    <td>{{ row['Grade'] }}</td>
+                    <td>{{ row['Room'] }}</td>
+                    <td>{{ row['Telnum'] }}</td>
+                    <td>{{ row['Keywords'] }}</td>
+                    <td><img src="{{ row['img_url'] }}" alt="'no information or picture available'" width="300"></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
