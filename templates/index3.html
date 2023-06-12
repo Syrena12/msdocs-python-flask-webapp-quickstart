@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <h1>Sun Wenjing 01115</h1>
+    <br>
+    <img src="{{ img_url }}" alt="Search Result" width="300">
+    <br>
+    <form>
+        <label for="csvFile">Choose a csv file:</label>
+        <input type="file" id="csvFile" name="csvFile" accept=".csv">
+        <input type="button" value="upload">
+    </form>
+    <h3>Search by Room</h3>
+    <form action="/search_by_room" method="post">
+        <input type="text" name="room" placeholder="Enter Room">
+        <input type="submit" value="Search">
+    </form>
+    <h3>Search by Tel Number</h3>
+    <form action="/search_by_teln" method="post">
+        <input type="text" name="start_teln" placeholder="Start Tel Number">
+        <input type="text" name="end_teln" placeholder="End Tel Number">
+        <input type="submit" value="Search">
+    </form>
+    <h3>Update Description</h3>
+    <form action="/update_description" method="post">
+        <input type="text" name="teln" placeholder="Enter Tel Number">
+        <input type="text" name="new_description" placeholder="Enter New Description">
+        <input type="submit" value="Update">
+    </form>
+</body>
+
+</html>
